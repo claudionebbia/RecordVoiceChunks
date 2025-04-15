@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grabadora de Audio con Traslape</title>
+    <title>Grabadora de Audio con Canales Separados</title>
     <link href="./style.css" rel="stylesheet" media="screen"/>
 </head>
 <body>
-    <h1>Grabadora de Audio con Traslape</h1>
+    <h1>Grabadora de Audio con Canales Separados</h1>
+    
+    <!-- Botón de configuración -->
+    <button class="settings-button" id="settingsButton">⚙️</button>
+    
     <div class="recorder-container">
         <div class="timer" id="timer">00:00</div>
         <button id="recordButton">Iniciar Grabación</button>
@@ -17,6 +21,26 @@
     <div id="recordingsList">
         <h2>Grabaciones</h2>
         <div id="recordingsContainer"></div>
+    </div>
+    
+    <!-- Modal de configuración -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Configuración</h2>
+            <div class="settings-form">
+                <div class="form-group">
+                    <label for="segmentDuration">Duración de cada bloque (segundos):</label>
+                    <input type="number" id="segmentDuration" min="1" max="60" value="15">
+                </div>
+                <div class="form-group">
+                    <label for="overlapDuration">Tiempo de traslape (segundos):</label>
+                    <input type="number" id="overlapDuration" min="0" max="30" value="5">
+                </div>
+                <button class="reset-settings" id="resetSettings">Reset a valores por defecto</button>
+                <div id="settingsSaved" class="settings-saved">Configuración guardada</div>
+            </div>
+        </div>
     </div>
 
     <script src="./main.js"></script>

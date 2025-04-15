@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 h1 {
     color: #333;
@@ -42,12 +43,138 @@ button.stop {
     padding-top: 20px;
 }
 .recording-item {
-    margin: 10px 0;
-    padding: 10px;
+    margin: 20px 0;
+    padding: 15px;
     background-color: #f9f9f9;
     border-radius: 4px;
+}
+.channel-recordings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.channel-container {
+    width: 48%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.channel-container h3 {
+    margin-top: 0;
+    color: #333;
 }
 .timer {
     font-size: 24px;
     margin: 20px 0;
+}
+.waveform {
+    width: 100%;
+    height: 60px;
+    background-color: #eee;
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Estilos para el botón de configuración */
+.settings-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #555;
+    padding: 8px;
+}
+.settings-button:hover {
+    color: #000;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.settings-form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.reset-settings {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.reset-settings:hover {
+    background-color: #e68a00;
+}
+
+.settings-saved {
+    color: #4CAF50;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.settings-saved.visible {
+    opacity: 1;
 }
