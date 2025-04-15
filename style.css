@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    color: #333;
+}
+.recorder-container {
+    margin: 30px 0;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+button.stop {
+    background-color: #f44336;
+}
+#statusDisplay {
+    margin: 20px 0;
+    font-weight: bold;
+}
+#recordingsList {
+    text-align: left;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+.recording-item {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+.timer {
+    font-size: 24px;
+    margin: 20px 0;
+}
